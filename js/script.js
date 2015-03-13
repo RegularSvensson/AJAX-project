@@ -43,6 +43,10 @@ function loadData() {
         //create articles variable that stores data from nytimes
         articles = data.response.docs;
 
+        //iterate through data object  which is the response from nytimes for individual articles and append each one to html
+        for (var i = 0; i < articles.length; i++) {
+            var article = articles[i];
+            $nytElem.append('<li class="article">' + '<a href="' + article.web_url + '">' + article.headline.main + '</a>' + ' <p>' + article.snippet + '</p>' + '</li>');
         };
     })
 
