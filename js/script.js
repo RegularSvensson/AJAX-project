@@ -22,6 +22,9 @@ function loadData() {
     //concatenate street and city as adress
     var adress = streetStr + ', ' + cityStr;
 
+    //change heading by selecting greeting id (or class) using jQuery
+    $greeting.text('So, you want to live at ' + adress + '?');
+
 
     return false;
 };
