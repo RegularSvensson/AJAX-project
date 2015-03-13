@@ -37,6 +37,9 @@ function loadData() {
     //Pass in nytimesURL and an anonymous function into .getJSON
     $.getJSON(nytimesUrl, function(data) {
 
+        //set nytHeader text using jQuery
+        $nytHeaderElem.text('New York Times Articles About' + cityStr);
+
         };
     })
 
