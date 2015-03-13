@@ -38,7 +38,7 @@ function loadData() {
     $.getJSON(nytimesUrl, function(data) {
 
         //set nytHeader text using jQuery
-        $nytHeaderElem.text('New York Times Articles About' + cityStr);
+        $nytHeaderElem.text('New York Times Articles About ' + cityStr);
 
         //create articles variable that stores data from nytimes
         articles = data.response.docs;
