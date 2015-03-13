@@ -29,6 +29,11 @@ function loadData() {
     //append this url as an img class bgimg to html body  using jQuery
     $body.append('<img class="bgimg" src="' + streetviewUrl + '">');
 
+    // Your NY Times AJAX request goes here
+
+    // create NY Times url with city string and api key
+    var nytimesUrl = 'http://api.nytimes.com/svc/search/v2/articlesearch.json?q=' + cityStr + '&sort=newest&api-key=f56a49e81916642789304326d5bc60df:9:71579088';
+
     return false;
 };
 
