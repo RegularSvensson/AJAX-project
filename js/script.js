@@ -58,6 +58,26 @@ function loadData() {
     //declare var for wikipedia api string
     var wikiUrl = 'http://en.wikipedia.org/w/api.php?action=opensearch&search=' + cityStr + '&format=json&callback=wikiCallback';
 
+    //ajax request object
+    $.ajax({
+        //assign wikiURl as key to url
+        url: wikiUrl,
+        // set datatype to jsonp
+        dataType: 'jsonp',
+        //next line is redundant in this case
+        // jsonp: 'callback', 
+        //success function with response from wikipedia as parameter, run when we get a response
+        success: function(response) {
+            //declare variable and assign response to it
+            var articleList = response[1];
+            //iterate through articleList and append urls and article strings to html as list items
+            for (var i = 0; i < articleList.length; i++) {
+                articleStr = articleList[i];
+                var url = 'http://en.wikipedia.org/wiki/' + articleStr;
+                $wikiElem.append('<li><a href="' + url + '">' + articleStr + '</a></li>');
+            };
+        }
+    });
     return false;
 };
 
