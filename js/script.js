@@ -14,6 +14,11 @@ function loadData() {
     // load streetview
 
     // YOUR CODE GOES HERE!
+    
+    //create vars for values in street & city elements. 
+    var streetStr = $('#street').val();
+    var cityStr = $('#city').val();
+
 
     return false;
 };
