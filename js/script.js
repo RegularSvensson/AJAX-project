@@ -19,6 +19,9 @@ function loadData() {
     var streetStr = $('#street').val();
     var cityStr = $('#city').val();
 
+    //concatenate street and city as adress
+    var adress = streetStr + ', ' + cityStr;
+
 
     return false;
 };
