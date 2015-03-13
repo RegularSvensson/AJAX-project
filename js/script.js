@@ -12,8 +12,6 @@ function loadData() {
     $nytElem.text("");
 
     // load streetview
-
-    // YOUR CODE GOES HERE!
     
     //create vars for values in street & city elements. 
     var streetStr = $('#street').val();
